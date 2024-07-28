@@ -3,7 +3,7 @@ Code-proxy console allows to interact with Allegro library (SubC.AllegroDotNet) 
 You can use pipes to redirect input/output to/from the code-proxy to your application which does not support Allegro library.
 ## Example of a manual usage
 1. Run CodeProxy.Console.exe
-2. Type in the console the following code (with the Enter at the end):
+2. Type in the console the following c# code chunks (with the Enter at the end):
 ```csharp
 Al.Init();
 Al.InitFontAddon();
@@ -26,7 +26,7 @@ R.Run();
 
 ````
 You should be able to see the Allegro window with the text "Hello, World!".
-Input is divided using a special token "R.Run();" which is used to run outstanding code.
+Input is divided to runnable code chunks using a special token "R.Run();"
 ## Versioning
 The versioning follows the following patterns:
 	v(major).(minor) - for a new release
