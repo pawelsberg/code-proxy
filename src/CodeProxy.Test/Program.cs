@@ -1,4 +1,4 @@
 ﻿using CodeProxy.Test;
 
-Examples.SimpleExample1();
+Examples.SimpleExample2();
 

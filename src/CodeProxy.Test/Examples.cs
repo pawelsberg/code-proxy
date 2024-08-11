@@ -135,11 +135,13 @@ public static class Examples
         Al.FlipDisplay();
         Console.WriteLine("DISPLAY_WIDTH:" + Al.GetDisplayWidth(Al.GetCurrentDisplay()));
         Console.WriteLine("DISPLAY_HEIGHT:" + Al.GetDisplayHeight(Al.GetCurrentDisplay()));
-
+        
         Al.ClearToColor(Al.MapRgb(0, 0, 200));
         AllegroFont? font = Al.LoadTtfFont(Environment.GetFolderPath(Environment.SpecialFolder.Fonts) + @"\consola.ttf", 200, LoadFontFlags.None);
-        Al.DrawUstr(font, Al.MapRgb(50, 0, 0), 1920, 1200, FontAlignFlags.Center, Al.UstrNew("Hello, World!"));
+        Al.DrawUstr(font, Al.MapRgb(50, 0, 0), 0, 0, FontAlignFlags.Left, Al.UstrNew("Hello, World!"));
+        Console.WriteLine("USTR_WIDTH:" + Al.GetUstrWidth(font, Al.UstrNew("Hello, World!")));
         Al.DestroyFont(font);
+        Al.DrawRectangle(0, 0, 1430, 200, Al.MapRgb(0, 0, 0), 10f);
         Al.DrawFilledCircle(1920, 1200, 100, Al.MapRgb(0, 0, 0));
         Al.DrawCircle(1920, 1200, 100, Al.MapRgb(220, 0, 0), 10);
         Al.DrawRectangle(1920, 1200, 100, 100, Al.MapRgb(0, 0, 0), 10f);
