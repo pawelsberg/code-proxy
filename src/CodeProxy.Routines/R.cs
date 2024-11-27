@@ -51,6 +51,8 @@ public static class R
         string[] refPaths = new[] {
                 typeof(System.Object).GetTypeInfo().Assembly.Location,
                 typeof(System.Linq.Enumerable).GetTypeInfo().Assembly.Location,
+                typeof(System.Diagnostics.Process).GetTypeInfo().Assembly.Location,
+                typeof(System.ComponentModel.Component).GetTypeInfo().Assembly.Location,
                 typeof(Console).GetTypeInfo().Assembly.Location,
                 Path.Combine(Path.GetDirectoryName(typeof(System.Runtime.GCSettings).GetTypeInfo().Assembly.Location), "System.Runtime.dll"),
                 typeof(Al).GetTypeInfo().Assembly.Location,

@@ -2,6 +2,7 @@
 using SubC.AllegroDotNet;
 using SubC.AllegroDotNet.Enums;
 using SubC.AllegroDotNet.Models;
+using System.Diagnostics;
 
 namespace CodeProxy.Test;
 
@@ -161,5 +162,16 @@ public static class Examples
         Al.Rest(30);
         Al.DestroyDisplay(Al.GetCurrentDisplay());
         Al.UninstallSystem();
+    }
+    public static void StartPs()
+    {
+        ProcessStartInfo psi = new() 
+        { 
+            FileName = "powershell", 
+            UseShellExecute = true, 
+            CreateNoWindow = false, 
+            WorkingDirectory = "c:\\" 
+        }; 
+        Process.Start(psi);
     }
 }
